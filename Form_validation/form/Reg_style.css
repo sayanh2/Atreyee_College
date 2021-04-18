@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body {
+    font-size: 14px;
+    background: #f6e9f1;
+}
+.registration {
+    background-color: #fff;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 8px solid #efa6b3;
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.registration h2 {
+    font-size: 38px;
+    padding-bottom: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+.input-name {
+    width: 90%;
+    position: relative;
+    margin: 35px auto;
+}
+.lock {
+    padding: 8px 12px;
+}
+.name {
+    height: 35px;
+    width: 45%;
+    padding: 8px 0px 8px 50px;
+}
+.input-name span {
+    margin-left: 35px;
+}
+.text-name {
+    height: 35px;
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.input-name i {
+    position: absolute;
+    font-size: 18px;
+    border-right: 2px solid #efa6b3;
+}
+.email {
+    height: 35px;
+    padding: 8px;
+}
+.input-name .fa {
+    color: #efa6b3;
+}
+.text-name, .name {
+    border: 2px solid #cccccc;  
+}
+.text-name:hover, .name:hover {
+    background-color: #fafafa;
+}
+.radio-button {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 2px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.gender {
+    margin-right: 16px;
+    font-size: 18px;
+    color: #696868;
+}
+.gender::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+    border-radius: 100%;
+    vertical-align: -3px;
+    border: 2px solid #cccccc;
+    padding: 2px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.3s ease;
+}
+.radio-button:hover + .gender::before {
+    border-color: #efa6b3;
+}
+.radio-button:checked + .gender::before {
+    background-color: #efa6b3;
+    border-color: #efa6b3;
+}
+.country {
+    display: inline-block;
+    font-size: 15px;
+    width: 100%;
+    height: 35px;
+    padding: 0px 30px;
+    cursor: pointer;
+    color: #7b7b7b;
+    border: 1px solid #cccccc;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+}
+.country::-ms-expand {
+    display: none;
+}
+.country:hover, .country:focus {
+    color: #efa6b3;
+    border-color: #efa6b3;
+    outline: none;
+    background: #fafafa;
+}
+.country option {
+    font-size: 30px;
+    font-weight: bold;
+}
+.arrow {
+    position: absolute;
+    top: calc(40% - 2px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+.country:hover +.arrow, .country:focus +.arrow {
+    border-top-color: #efa6b3;
+}
+.chack {
+   font-size: 16px;
+   color: #7b7b7b;
+}
+.chack-button {
+    margin-right: 16px;
+    position: relative;
+    top: 2px;
+}
+.input-name .button {
+    display: block;
+    margin: 28px auto 0px;
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #efa6b3;
+    font-size: 18px;
+    color: #efa6b3;
+}
+.input-name .button:hover {
+    background: #efa6b3;
+    color: #fff;
+}
+.space, .spaceE, .spaceP, .spaceReP {
+    margin-left: 30px;
+    font-size: 18px;
+    color: #e44444;
+    position: relative;
+    top: -30px;
+}
+
+
+
+header a {
+    font-size: 24px;
+    color: #f6e9f1;
+}
+header {
+    background: #efa6b3;
+}
+header .nav-link:hover {
+    color: #ab517a;
+}
+header .navbar-brand {
+    padding: 0 0 0 60px;
+    
+}
+header .navbar-brand img {
+    height: 50px;
+    width: 70px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f6e9f1;
+    min-width: 120px;
+    box-shadow: 0px 2px 15px 8px rgba(240, 181, 237, 0.3);
+    z-index: 1;
+    transition: 0.8s ease;
+    margin-left: 10px;
+}
+
+.dropdown-content a {
+    color: #efa6b3;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+    transition: all 0.8s ease;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    transition:  0.8s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

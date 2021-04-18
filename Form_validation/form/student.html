@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 14px;
+            background: #f6e9f1;
+        }
+
+        .registration {
+            background-color: #fff;
+            width: 500px;
+            padding: 25px;
+            margin: 50px auto 0;
+            border-top: 8px solid #efa6b3;
+            border-radius: 2%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .registration h2 {
+            font-size: 38px;
+            padding-bottom: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .input-name {
+            width: 90%;
+            position: relative;
+            margin: 35px auto;
+        }
+
+        .lock {
+            padding: 8px 12px;
+        }
+
+        .name {
+            height: 35px;
+            width: 100%;
+            padding: 8px 0 8px 60px;
+            border: 2px solid #cccccc;
+
+        }
+
+        .input-name i {
+            position: absolute;
+            font-size: 18px;
+            border-right: 2px solid #efa6b3;
+        }
+
+        .input-name .fa {
+            color: #efa6b3;
+        }
+
+
+        .name:hover {
+            background-color: #fafafa;
+        }
+
+        .input-name .button {
+            display: block;
+            margin: 80px auto 0px;
+            padding: 10px 30px;
+            background: transparent;
+            border-radius: 10px;
+            border: 2px solid #efa6b3;
+            font-size: 18px;
+            color: #efa6b3;
+        }
+
+        .input-name .button:hover {
+            background: #efa6b3;
+            color: #fff;
+        }
+
+        .radio-button {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 2px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .gender {
+            margin-right: 16px;
+            font-size: 18px;
+            color: #696868;
+        }
+
+        .gender::before {
+            content: "";
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+            border-radius: 100%;
+            vertical-align: -5px;
+            border: 2px solid #cccccc;
+            padding: 2px;
+            background-color: transparent;
+            background-clip: content-box;
+            transition: all 0.3s ease;
+        }
+
+        .radio-button:hover+.gender::before {
+            border-color: #efa6b3;
+        }
+
+        .radio-button:checked+.gender::before {
+            background-color: #efa6b3;
+            border-color: #efa6b3;
+        }
+
+        header a {
+            font-size: 24px;
+            color: #f6e9f1;
+        }
+
+        header {
+            background: #efa6b3;
+        }
+
+        header .nav-link:hover {
+            color: #ab517a;
+        }
+
+        header .navbar-brand {
+            padding: 0 0 0 60px;
+
+        }
+
+        header .navbar-brand img {
+            height: 50px;
+            width: 70px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f6e9f1;
+            min-width: 120px;
+            box-shadow: 0px 2px 15px 8px rgba(240, 181, 237, 0.3);
+            z-index: 1;
+            transition: 0.8s ease;
+            margin-left: 10px;
+        }
+
+        .dropdown-content a {
+            color: #efa6b3;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background: #ddd;
+            transition: all 0.8s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition: 0.8s ease;
+        }
+        .space {
+            margin-left: 25px;
+            font-size: 18px;
+            color: #e44444;
+            position: relative;
+            top: -30px;
+        }
+    </style>
+
+    <script>
+        function checkname(){
+    var regx = /^[a-zA-Z ]{3,10}$/;
+    var name = document.getElementById('name').value;
+    if(regx.test(name)){
+        document.getElementById('space').style.visibility = 'hidden';
+        
+    }
+    else
+    document.getElementById('space').style.visibility = 'visible';
+    document.getElementById('space').innerText = "Enter valid name";   
+}
+function checknamef(){
+    var regx = /^[a-zA-Z ]{3,10}$/;
+    var name = document.getElementById('fname').value;
+    if(regx.test(name)){
+        document.getElementById('spacef').style.visibility = 'hidden';
+        
+    }
+    else
+    document.getElementById('spacef').style.visibility = 'visible';
+    document.getElementById('spacef').innerText = "Enter valid name";   
+}
+function checknamem(){
+    var regx = /^[a-zA-Z ]{3,10}$/;
+    var name = document.getElementById('mname').value;
+    if(regx.test(name)){
+        document.getElementById('spacem').style.visibility = 'hidden';
+        
+    }
+    else
+    document.getElementById('spacem').style.visibility = 'visible';
+    document.getElementById('spacem').innerText = "Enter valid name";   
+}
+function checknameg(){
+    var regx = /^[a-zA-Z ]{3,10}$/;
+    var name = document.getElementById('gname').value;
+    if(regx.test(name)){
+        document.getElementById('spaceg').style.visibility = 'hidden';
+        document.getElementById('spaceg').style.display = 'none';
+    }
+    else
+    document.getElementById('spaceg').style.visibility = 'visible';
+    document.getElementById('spaceg').innerText = "Enter valid name";   
+}
+
+
+function checkpass(){
+    var regx = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    var pass = document.getElementById('pass').value;
+
+    if(regx.test(pass)){
+        document.getElementById('spacep').style.visibility = 'hidden';
+    }
+    else {
+        document.getElementById('spacep').style.visibility = 'visible';
+        document.getElementById('spacep').innerText = "At least one number, one uppercase and one special character";
+    }
+}
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg ">
+
+                <a class="navbar-brand" href="#"><img src="assets/logo.jpeg"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a class="nav-link" href="#">Registration</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Student</a>
+                                    <a href="Reg_index.html">Mentor</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="registration">
+        <h2>Registration here</h2>
+        <form>
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder="NAME OF THE CANDIDATE" class="name" id="name" onblur="checkname()">
+            </div>
+
+            <div class="space" id="space"></div>
+
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder="FATHER'S NAME" class="name" id="fname" onblur="checknamef()">
+            </div>
+
+            <div class="space" id="spacef"></div>
+
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder="MOTHER'S NAME" class="name" id="mname" onblur="checknamem()">
+            </div>
+
+            <div class="space" id="spacem"></div>
+
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder="GUARDIAN'S NAME" class="name" id="gname" onblur="checknameg()">
+            </div>
+
+            <div class="space" id="spaceg"></div>
+
+            <div class="input-name">
+                <i class="fa fa-briefcase lock"></i>
+                <input type="text" placeholder="FATHER'S OCCUPATION" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-briefcase lock"></i>
+                <input type="text" placeholder="MOTHER'S OCCUPATION" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-phone lock"></i>
+                <input type="text" placeholder="CANDIDATE'S CONTACT NUMBER" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-phone lock"></i>
+                <input type="text" placeholder="GUARDIAN'S CONTACT NUMBER" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-calendar lock"></i>
+                <input type="text" placeholder="CANDIDATE'S D.O.B" class="name">
+            </div>
+
+            <div class="input-name">
+                <input type="radio" name="radiogroup1" id="ravi" class="radio-button">
+                <label for="ravi" class="gender">Male</label>
+                <input type="radio" name="radiogroup1" id="ravi1" class="radio-button">
+                <label for="ravi1" class="gender">Female</label>
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-address-card lock"></i>
+                <input type="text" placeholder="PERMANENT ADDRESS" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-trophy lock"></i>
+                <input type="text" placeholder="WEBJEE RANK" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-question-circle lock"></i>
+                <input type="text" placeholder="PERCENTAGE OF SECONDARY MARKS" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-question-circle lock"></i>
+                <input type="text" placeholder="PERCENTAGE OF HIGHER SECONDARY MARKS" class="name">
+            </div>
+
+            <div class="input-name">
+                <i class="fa fa-lock lock"></i>
+                <input type="text" placeholder="PASSWORD" class="name" id="pass" onblur="checkpass()">
+            </div>
+
+            <div class="space" id="spacep"></div>
+
+            <div class="input-name">
+                <input type="submit" value="Register" class="button">
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

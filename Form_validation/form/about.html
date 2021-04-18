@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+    <title>About Us</title>
+
+    <style>
+        header a {
+            font-size: 24px;
+            color: #f6e9f1;
+        }
+
+        header {
+            background: #efa6b3;
+        }
+
+        header .nav-link:hover {
+            color: #ab517a;
+        }
+
+        header .navbar-brand {
+            padding: 0 0 0 60px;
+
+        }
+
+        header .navbar-brand img {
+            height: 50px;
+            width: 70px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f6e9f1;
+            min-width: 120px;
+            box-shadow: 0px 2px 15px 8px rgba(240, 181, 237, 0.3);
+            z-index: 1;
+            transition: 0.8s ease;
+            margin-left: 10px;
+        }
+
+        .dropdown-content a {
+            color: #efa6b3;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background: #ddd;
+            transition: all 0.8s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition: 0.8s ease;
+        }
+
+        .about h1 {
+          font-size: 60px;
+          color: #efa6b3;
+          margin: 30px auto;
+        }
+        .about p {
+          font-size: 20px;
+          margin: auto 30px;
+        }
+        .about h2 {
+          font-size: 40px;
+          margin: 35px 0 50px 40px;
+          color: #efa6b3;
+        }
+        .col-md-3 .card-body .title {
+          font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg ">
+                
+                    <a class="navbar-brand" href="#"><img src="assets/logo.jpeg"></a>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <div class="dropdown">
+                        <a class="nav-link" href="#">Registration</a>
+                        <div class="dropdown-content">
+                          <a href="student.html">Student</a>
+                          <a href="Reg_index.html">Mentor</a>
+                        </div>
+                      </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+              </nav>
+        </div>
+    </header>
+
+
+    <div class="about">
+        <h1 class="text-center">About Us</h1>
+        <p>This project will help us to track any student of Engineering College. Here three people can operate the site  1. Mentor  2. Student  3. Admin . Mentor can track students, he / she can give them marks , rating ,..etc.  He can also upload student's attendance.  Student can view their profile, semester wise performance, they can edit their details etc.  Admin can change mentor name semester wise .</p>
+        <h2>There are four people working in this project</h2>
+        <div class="cards container-fluid text-center">
+
+          <div class="team row">
+
+            <!-- card 1 -->
+            <div class="col-md-3 text-center">
+           
+          <div class="card" style="width: 18rem;">
+            <img src="assets/Atreyee.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="title card-title">Atreyee Mallick</h5>
+              <p class="card-text text-secondary">Studing Computer Science and Engineering from GARGI MEMORIAL INSTITUTE OF TECHNOLOGY</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- card 2 -->
+
+
+        <div class="col-md-3 text-center">
+
+          <div class="card" style="width: 18rem;">
+            <img src="assets/Promit.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="title card-title">Pramit Kumar Das</h5>
+              <p class="card-text text-secondary">Studing Computer Science and Engineering from GARGI MEMORIAL INSTITUTE OF TECHNOLOGY</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-3 text-center">
+
+          <div class="card" style="width: 18rem;">
+            <img src="assets/Hassan.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="title card-title">Md. Hassan</h5>
+              <p class="card-text text-secondary">Studing Computer Science and Engineering from GARGI MEMORIAL INSTITUTE OF TECHNOLOGY</p>
+            </div>
+          </div>
+
+        </div>
+
+
+          <!-- card 4 -->
+
+          <div class="col-md-3 text-center">
+
+          <div class="card" style="width: 18rem;">
+            <img src="assets/Rohit.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="title card-title">Rohit Biswas</h5>
+              <p class="card-text text-secondary">Studing Computer Science and Engineering from GARGI MEMORIAL INSTITUTE OF TECHNOLOGY</p>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+        
+        
+        </div>
+        
+        
+        
+    </div>
+
+
+
+    
+</body>
+</html>
